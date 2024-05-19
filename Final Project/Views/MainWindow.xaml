@@ -1,0 +1,129 @@
+﻿<Window x:Class="Final_Project.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Final_Project.Views" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        
+    Title="Online Store" Height="600" Width="920" MinWidth="640" MinHeight="390" Background="Transparent" WindowStartupLocation="CenterScreen" >
+    <Border Background="#14154A" >
+        <Grid Background="Transparent" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <materialDesign:PackIcon Name="IconW" Kind="Shopping" Background="Transparent" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center"  Width="50" Height="50" ToolTip="Shmail Store"/>
+
+                <DockPanel Grid.Column="1">
+                    <Button x:Name="AddButtton" 
+    Background="#1d9bf0"
+   Click="AddButtton_Click"
+    DockPanel.Dock="Right"
+        Margin="20"
+        VerticalAlignment="Center"
+        Style="{StaticResource MaterialDesignPaperSecondaryLightButton}"
+        materialDesign:ButtonAssist.CornerRadius="15" Cursor="Hand">
+
+                        <Button.ToolTip>Add Product</Button.ToolTip>
+                        <materialDesign:PackIcon Kind="CartPlus" Width="40" Height="25" Foreground="White" />
+                    </Button>
+
+                    <materialDesign:Badged DockPanel.Dock="Right" VerticalAlignment="Center" Badge="{Binding Basket.Count}" materialDesign:ButtonAssist.CornerRadius="5">
+
+                        
+                        <Button Name="basket" 
+        Background="#1d9bf0"
+        Click="Basket_Click"
+
+        HorizontalAlignment="Right"
+        Style="{StaticResource MaterialDesignPaperSecondaryLightButton}"
+        materialDesign:ButtonAssist.CornerRadius="15">
+
+                            <Button.ToolTip>Show Basket</Button.ToolTip>
+                            <materialDesign:PackIcon Kind="Basket" Width="20" Height="25" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Button>
+                    </materialDesign:Badged>
+                    <materialDesign:ColorZone  MaxWidth="500"
+                DockPanel.Dock="Left" HorizontalAlignment="Left" VerticalAlignment="Center"
+               Mode="Standard"
+CornerRadius="15"
+Panel.ZIndex="1"
+Margin="20 0 0 0"
+materialDesign:ShadowAssist.ShadowDepth="Depth1">
+                        <Grid x:Name="grid">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition
+      Width="Auto" />
+                                <ColumnDefinition
+      Width="*" />
+                                <ColumnDefinition
+      Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Button Name="Searchbtn"
+                        ToolTip="Search"
+                        Click="Searchbtn_Click"
+    Style="{StaticResource MaterialDesignToolButton}">
+                                <materialDesign:PackIcon
+      Kind="Search"
+      Opacity=".56" />
+                            </Button>
+
+                            <TextBox
+                        ToolTip="Use '-' symbol for searching price range"
+                        x:Name="txtSearch"
+                                KeyDown="txtSearch_KeyDown"
+                        
+    Grid.Column="1"
+    Margin="8 0 0 0"
+    materialDesign:HintAssist.Hint="Search for Name or Price"
+    materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
+    BorderThickness="0"
+    MinWidth="200"
+    VerticalAlignment="Center"/>
+                            <Button
+                        ToolTip="Record Voice"
+    Style="{StaticResource MaterialDesignToolButton}"
+    Grid.Column="2">
+                                <materialDesign:PackIcon
+      Kind="Microphone"
+      Opacity=".56"
+      Margin="8 0 0 0" />
+                            </Button>
+                        </Grid>
+                    </materialDesign:ColorZone>
+
+                </DockPanel>
+
+            </Grid>
+
+            <materialDesign:Card Grid.Row="1" Background="Transparent">
+                <TabControl materialDesign:ColorZoneAssist.Background="Transparent" materialDesign:ColorZoneAssist.Foreground="#1d9bf0"
+Style="{StaticResource MaterialDesignFilledTabControl}"
+TabStripPlacement="Left" >
+                    <TabItem
+  Header="Products">
+                        <ScrollViewer x:Name="MyScrollViewer" Margin="20 0 0 20" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Hidden" Grid.Row="1" Grid.Column="1">
+                            <WrapPanel Name="pnlProducts" Width="{Binding ElementName=MyScrollViewer, Path=ViewportWidth}"  ></WrapPanel>
+                        </ScrollViewer>
+                    </TabItem>
+                    <TabItem
+  Header="Favorites">
+                        <ScrollViewer x:Name="ScrollViewerFav" Margin="20 0 0 20" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Hidden" Grid.Row="1" Grid.Column="1">
+                            <WrapPanel Name="pnlFavorits" Width="{Binding ElementName=ScrollViewerFav, Path=ViewportWidth}"></WrapPanel>
+                        </ScrollViewer>
+                    </TabItem>
+
+                </TabControl>
+            </materialDesign:Card>
+
+
+        </Grid>
+    </Border>
+</Window>
