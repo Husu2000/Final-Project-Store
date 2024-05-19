@@ -140,7 +140,7 @@
   ToolTip="Add To Basket"
  >
                 <materialDesign:PackIcon
-    Kind="Add" />
+    Kind="Add" VerticalAlignment="Center" />
             </Button>
             <ToggleButton
                 x:Name="FavoritBtn"

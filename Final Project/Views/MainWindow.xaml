@@ -6,7 +6,10 @@
         xmlns:local="clr-namespace:Final_Project.Views" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         
-    Title="Online Store" Height="600" Width="920" MinWidth="640" MinHeight="390" Background="Transparent" WindowStartupLocation="CenterScreen" >
+    Title="M1Huss Gaming Store" Height="600" Width="920" MinWidth="640" MinHeight="390" Background="Blue" WindowStartupLocation="CenterScreen">
+
+    
+
     <Border Background="#14154A" >
         <Grid Background="Transparent" >
             <Grid.RowDefinitions>
@@ -113,12 +116,7 @@ TabStripPlacement="Left" >
                             <WrapPanel Name="pnlProducts" Width="{Binding ElementName=MyScrollViewer, Path=ViewportWidth}"  ></WrapPanel>
                         </ScrollViewer>
                     </TabItem>
-                    <TabItem
-  Header="Favorites">
-                        <ScrollViewer x:Name="ScrollViewerFav" Margin="20 0 0 20" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Hidden" Grid.Row="1" Grid.Column="1">
-                            <WrapPanel Name="pnlFavorits" Width="{Binding ElementName=ScrollViewerFav, Path=ViewportWidth}"></WrapPanel>
-                        </ScrollViewer>
-                    </TabItem>
+                   
 
                 </TabControl>
             </materialDesign:Card>
