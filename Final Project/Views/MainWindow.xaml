@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Final_Project.Views" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         
-    Title="M1Huss Gaming Store" Height="600" Width="920" MinWidth="640" MinHeight="390" Background="Blue" WindowStartupLocation="CenterScreen">
+    Title="M1Huss Gaming Store" Height="800" Width="1000" MinWidth="640" MinHeight="390" Background="Blue" WindowStartupLocation="CenterScreen">
 
     
 

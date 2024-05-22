@@ -6,11 +6,11 @@
              xmlns:local="clr-namespace:Final_Project.UserControls"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
-                         Height="250" 
-             Width="150"
+                         Height="350" 
+             Width="240"
              Margin="5"
-             MaxHeight="250"
-             MaxWidth="150" 
+             MaxHeight="450"
+             MaxWidth="350" 
              materialDesign:ShadowAssist.ShadowDepth="Depth5" 
              MouseDoubleClick="UserControl_MouseDoubleClick"
 >
@@ -152,8 +152,8 @@
                 Grid.Row="4"
             Margin="0 0 20 5 "
             HorizontalAlignment="Right"
-            Width="25"
-            Height="25"
+            Width="30"
+            Height="30"
   IsChecked="False"
                 />
 

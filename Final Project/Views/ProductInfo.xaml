@@ -9,10 +9,10 @@
           Title="Product Info" 
     Name="InfoWin"
     Height="690" 
-    Width="400"
+    Width="515"
     MinWidth="350"
     MinHeight="500"
-    MaxWidth="440"
+    MaxWidth="640"
     Background="#14154A"
     Foreground="#79C4F6"
     WindowStartupLocation="CenterScreen"
@@ -199,7 +199,7 @@
         VerticalAlignment="Center"
         HorizontalAlignment="Center"
         FontFamily="MV Boli"
-        Style="{StaticResource MaterialDesignHeadline6TextBlock}"
+        Style="{StaticResource MaterialDesignHeadline5TextBlock}"
         Text="Description"/>
 
                 <TextBlock
